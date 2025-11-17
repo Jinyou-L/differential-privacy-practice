@@ -25,7 +25,7 @@ noise_rounded = round(noise)
 noised_value = max(0, int(value + noise_rounded))
 
 ## Repository Structure
-
+```python
 .
 ├── dp.py                # DP histogram generation and plotting
 ├── client.py            # Data counting utilities
@@ -34,7 +34,7 @@ noised_value = max(0, int(value + noise_rounded))
 ├── dp-plot.png          # Sample output visualization
 ├── requirements.txt     # Python dependencies
 └── README.md            # Project documentation
-
+```
 ### Install dependencies
 ```python
 pip install -r requirements.txt
