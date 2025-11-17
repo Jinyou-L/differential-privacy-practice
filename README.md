@@ -9,9 +9,7 @@ The goal: enable data analytics while ensuring that **no single user’s data ca
 
 This project implements the **Laplace Mechanism** for a histogram query:
 
-\[
-\text{noised\_value} = \text{true\_count} + \text{Laplace}(0, \frac{\Delta f}{\epsilon})
-\]
+noised_value = true_count + Laplace( mean = 0, scale = Δf / ε )
 
 - Global sensitivity: **Δf = 1**
 - Laplace noise sampling:
@@ -38,11 +36,13 @@ noised_value = max(0, int(value + noise_rounded))
 └── README.md            # Project documentation
 
 ### Install dependencies
+```python
 pip install -r requirements.txt
-
+```
 ### Run a DP histogram
+```python
 python dp.py 0.5
-
+```
 Example output:
 
 Using epsilon = 0.5
