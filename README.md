@@ -18,7 +18,13 @@ This project implements the **Laplace Mechanism** for a histogram query:
 
 ```python
 np.random.laplace(mu, b)
+```
 
+Core logic excerpt from dp.py:
+
+noise = np.random.laplace(mu, b)
+noise_rounded = round(noise)
+noised_value = max(0, int(value + noise_rounded))
 
 ## Repository Structure
 
@@ -30,7 +36,6 @@ np.random.laplace(mu, b)
 ├── dp-plot.png          # Sample output visualization
 ├── requirements.txt     # Python dependencies
 └── README.md            # Project documentation
-
 
 ### Install dependencies
 pip install -r requirements.txt
@@ -47,4 +52,3 @@ Plot saved at 'dp-plot.png'
 ### Author
 Yuki Li (Data Science | Privacy & Trust & Safety)
 If you use this project or want to collaborate on privacy engineering, feel free to reach out!
-
